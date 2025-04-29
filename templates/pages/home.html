@@ -1,8 +1,24 @@
 {% extends "base.html" %}
 
-{% block title %}Home - Jubilee{% endblock title%}
+{% block title %}Home - Jubilee{% endblock title %}
 
 {% block content %}
-    <h1>Welcome to Jubilee</h1>
-    <p>Celebrating Freedom, Unity, and Legacy.</p>
+
+    {% if messages %}
+    <ul>
+        {% for message in messages %}
+            <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+
+    {% if user.is_authenticated %}
+        <h1>Welcome back, {{ user.username }}!</h1>
+        <p>Thank you for being part of Jubilee!</p>
+    {% else %}
+        <h1>Welcome to Jubilee</h1>
+        <p>Celebrating Freedom, Unity, and Legacy.</p>
+        <p><a href="{% url 'login' %}">Login</a> to join the conversation!</p>
+    {% endif %}
+
 {% endblock content %}
