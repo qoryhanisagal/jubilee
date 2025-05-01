@@ -25,8 +25,10 @@ admin.site.site_title = "Jubilee Admin Portal"
 admin.site.index_title = "Welcome to Jubilee Administrator"
 
 urlpatterns = [
+    
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
     path('accounts/', include('accounts.urls')),
     path("accounts/", include("django.contrib.auth.urls")),
+    path('posts/', include('posts.urls')),
 ]
