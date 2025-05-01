@@ -128,3 +128,7 @@ LOGOUT_REDIRECT_URL = 'home'
 ADMIN_SITE_HEADER = "Jubilee Administration"
 ADMIN_SITE_TITLE = "Jubilee Admin Portal"
 ADMIN_INDEX_TITLE = "Welcome to Jubilee Administrator"
+
+# Email settings for development
+# The console backend will print emails to the console
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
