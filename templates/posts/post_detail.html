@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}{{ post.title }}{% endblock title %}
+{% block content %}
+<div class="container mt-4">
+  <h1>{{ post.title }}</h1>
+  <h5 class="text-muted">{{ post.subtitle }}</h5>
+  <p>{{ post.body }}</p>
+  <p><small>Author: {{ post.author }} | Status: {{ post.status.name }}</small></p>
+  <a href="{% url 'posts:post_edit' post.pk %}" class="btn btn-primary">Edit</a>
+  <a href="{% url 'posts:post_delete' post.pk %}" class="btn btn-danger">Delete</a>
+</div>
+{% endblock content %}
