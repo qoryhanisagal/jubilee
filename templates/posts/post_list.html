@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}All Posts{% endblock title %}
+{% block content %}
+<div class="container mt-4">
+  <h1>All Posts</h1>
+  <ul class="list-group">
+    {% for post in posts %}
+      <li class="list-group-item">
+        <a href="{% url 'posts:post_detail' post.pk %}">{{ post.title }}</a>
+        — <small>{{ post.created_on|date:"M d, Y" }}</small>
+      </li>
+    {% empty %}
+      <li class="list-group-item">No posts yet.</li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock content %}
