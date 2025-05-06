@@ -10,3 +10,9 @@ venv/
 
 # VS Code settings (optional)
 .vscode/
+
+# Environment variables
+echo ".env" >> .gitignore
+
+# Static files
+staticfiles
