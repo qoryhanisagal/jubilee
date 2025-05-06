@@ -5,6 +5,7 @@ from .views import (
     PostCreateView,
     PostUpdateView,
     PostDeleteView,
+    Test_403_View,
 )
 
 app_name = 'posts'
@@ -15,4 +16,5 @@ urlpatterns = [
     path('create/', PostCreateView.as_view(), name='post_create'),
     path('<int:pk>/edit/', PostUpdateView.as_view(), name='post_edit'),
     path('<int:pk>/delete/', PostDeleteView.as_view(), name='post_delete'),
+    path('forbidden/', Test_403_View, name='forbidden'),
 ]
