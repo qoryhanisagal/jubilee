@@ -17,6 +17,8 @@ def create_initial_statuses(apps, schemaeditor):
     for key, value in entries.items():
         status_object = Status(name=key, description=value)
         status_object.save()
+        
+        
 
 class Migration(migrations.Migration):
 
