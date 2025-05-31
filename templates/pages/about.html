@@ -1,10 +1,74 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}About - Jubilee{% endblock title %}
 
 {% block content %}
-    <h1>About Jubilee</h1>
-    <p>Jubilee is a platform dedicated to celebrating freedom, unity, and legacy.</p>
-    <p>Our mission is to bring people together to share their stories and experiences.</p>
-    <p>Join us in our journey to create a world where everyone can celebrate their unique heritage.</p>
+<div class="about-page">
+
+<!-- Hero Section -->
+<header class="text-center py-5">
+<h1>Welcome to Jubilee </h1>
+</header>
+<!-- Mission Section -->
+    <section class="mission-section text-center py-5">
+        <p class="lead text-center mt-3">
+        Jubilee is a platform dedicated to celebrating freedom, unity, and legacy.
+        </p>
+        <p class="text-center mt-3"> 
+            Our mission is to bring people together to share their stories and experiences.
+        </p>
+        <p class="text-center mt-3"> 
+        We believe in the power of storytelling to connect people across cultures and generations.
+        </p>
+
+<!-- Hero Image / Banner -->
+    <div class="text-center my-4">
+    <img src="{% static 'img/world-banner.png' %}" alt="Global connection map" class="img-fluid hero-banner">
+    </div>
+<!-- Creators Section -->
+<section class="text-center creators-section py-5">
+<h2>Meet the Creators</h2>
+<div class="row justify-content-center mt-4">
+
+    <div class="col-md-3">
+    <div class="creator-card">
+        <img src="{% static 'img/alex_johnson.png' %}" alt="Alex Johnson" class="rounded-circle img-thumbnail">
+        <h5>Alex Johnson</h5>
+        <p class="text-muted small">Lead Developer with a passion for building intuitive user interfaces.</p>
+    </div>
+    </div>
+
+    <div class="col-md-3">
+    <div class="creator-card">
+        <img src="{% static 'img/maria_chen.png' %}" alt="Maria Chen" class="rounded-circle img-thumbnail">
+        <h5>Maria Chen</h5>
+        <p class="text-muted small">Project Manager ensuring everything runs smoothly and on time.</p>
+    </div>
+    </div>
+
+    <div class="col-md-3">
+    <div class="creator-card">
+        <img src="{% static 'img/jordan_lee.png' %}" alt="Jordan Lee" class="rounded-circle img-thumbnail">
+        <h5>Jordan Lee</h5>
+        <p class="text-muted small">Creative Director focused on delivering an exceptional user experience.</p>
+    </div>
+    </div>
+
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-4">
+<div class="container">
+    <p>Contact Us: <a href="mailto:support@jubliee.com">support@jubliee.com</a> | Phone: +1 234 567 890</p>
+    <div class="social-icons mt-2">
+    <a href="#" class="mx-2"><i class="bi bi-facebook"></i></a>
+    <a href="#" class="mx-2"><i class="bi bi-twitter"></i></a>
+    <a href="#" class="mx-2"><i class="bi bi-instagram"></i></a>
+    </div>
+</div>
+</footer>
+
+</div>
 {% endblock content %}
